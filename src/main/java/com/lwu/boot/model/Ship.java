@@ -1,10 +1,20 @@
 package com.lwu.boot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by Leon on 9/5/16.
  */
+@Entity
 public class Ship {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+
     String name;
     String description;
     String condition;
